@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gasmy_food_app/views/home%20page/home_screen.dart';
+import 'package:gasmy_food_app/views/home%20page/screens/home_screen.dart';
 
 class MyBottomNavigatorBarScreen extends StatefulWidget {
   const MyBottomNavigatorBarScreen({super.key});
