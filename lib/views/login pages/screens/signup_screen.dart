@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gasmy_food_app/views/login%20pages/components/my_text_field.dart';
+import 'package:gasmy_food_app/views/login%20pages/screens/signin_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -24,7 +25,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Theme.of(context).primaryColor,    
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
@@ -63,10 +64,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
+                  TextButton(onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SignInScreen()));
+                  }, child:Text(
                     "Already have an account?",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
+                  ), )
+                  
                 ],
               ),
             ),
